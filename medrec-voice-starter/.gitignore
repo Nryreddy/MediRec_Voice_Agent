@@ -1,0 +1,97 @@
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+$RECYCLE.BIN/
+
+# --- Node / Next.js (frontend & any subpackages) ---
+node_modules/
+.npm/
+.pnpm-store/
+.next/
+.next.cache/
+out/
+dist/
+coverage/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# VS Code workspace (keep local only)
+.vscode/
+
+# --- Python / FastAPI ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.dylib
+*.egg-info/
+.eggs/
+build/
+develop-eggs/
+dist/
+wheels/
+pip-wheel-metadata/
+.installed.cfg
+.pytest_cache/
+.mypy_cache/
+.pyre/
+.pytype/
+.cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.venv*/
+venv*/
+
+# Local SQLite / DB artifacts
+*.sqlite*
+*.db
+*.db-journal
+
+# --- n8n (when developing locally) ---
+.n8n/
+n8n_data/
+.n8n_backup/
+
+# --- Docker / runtime data ---
+/data/
+!data/sample_postop.csv   # keep the example CSV if present
+!data/README.md
+
+docker-compose.override.yml
+
+# --- Secrets & environment files ---
+.env
+.env.*
+.env*.local
+.env.local
+*.env
+
+# --- Editors / IDEs ---
+.idea/
+*.iml
+*.swp
+*.swo
+*~
+*.orig
+*.rej
+.project
+.settings/
+.classpath
+.history
+.tags
+tags
