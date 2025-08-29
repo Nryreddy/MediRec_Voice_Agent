@@ -458,7 +458,7 @@ function App() {
             Ready to Transform Recovery Care?
           </h2>
           <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-            Join healthcare providers worldwide who are improving patient outcomes with AI-powered post-surgery monitoring.
+            Join healthcare providers worldwide who are improving patient outcomes with AI outreach.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
