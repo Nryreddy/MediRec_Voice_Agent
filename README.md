@@ -1,6 +1,6 @@
 # MedRec Voice — Next.js + FastAPI + n8n (Starter)
 
-A tiny, production-shaped scaffold to trigger **n8n** workflows from a **Next.js** form via a **FastAPI** backend. Perfect for post-op check-ins, medication reconciliation flows, or any “start a call → orchestrate in n8n” use case.
+A lightweight, production-ready scaffold designed to initiate **n8n workflows** from a **Next.js-powered** form, routed through a **FastAPI** backend. Built to simplify and automate routine GP processes such as **post-consultation check-ins, medication reconciliation, or any scenario** that begins with a patient interaction and continues through orchestrated backend automation. Ideal for reducing manual overhead and improving follow-up care efficiency.
 
 ---
 
