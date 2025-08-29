@@ -75,7 +75,7 @@ function App() {
                 <Heart className="h-6 w-6 text-white" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
-                CareAI
+                MedRec Voice
               </span>
             </div>
             <div className="hidden md:flex space-x-8">
@@ -83,9 +83,11 @@ function App() {
               <button onClick={() => scrollToSection('how-it-works')} className="text-gray-700 hover:text-blue-600 transition-colors">How It Works</button>
               <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-blue-600 transition-colors">Contact</button>
             </div>
+            {/*
             <button className="bg-gradient-to-r from-blue-600 to-teal-600 text-white px-6 py-2 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-200">
               Get Started
             </button>
+            */}
           </div>
         </div>
       </nav>
@@ -116,6 +118,7 @@ function App() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              {/*
               <button className="group bg-gradient-to-r from-blue-600 to-teal-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center space-x-2">
                 <span>Start Your Recovery Journey</span>
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -124,12 +127,17 @@ function App() {
                 <span>Learn More</span>
                 <Activity className="h-5 w-5" />
               </button>
+              */}
               {/* New Patients Button */}
               <Link
                 to="/patients"
+                aria-label="Call patients"
                 className="group bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transform hover:scale-105 transition-all duration-300 inline-flex items-center space-x-2"
               >
-                <span>View Patients</span>
+                <span className="grid place-items-center w-10 h-10 rounded-full bg-white/20">
+                  <Phone className="h-8 w-8" />
+                </span>
+                <span>Call Patients</span>
               </Link>
               
       
@@ -217,35 +225,13 @@ function App() {
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Intelligent, multilingual AI that provides personalized post-surgery monitoring, 
-              connecting patients with the right care at the right time.
+              Intelligent, multilingual AI that supports patients after surgery and connects them
+              with the right care at the right time.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
-            <div className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500">
-              <div className="bg-gradient-to-r from-blue-500 to-teal-500 p-4 rounded-full w-16 h-16 mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Brain className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Smart Monitoring</h3>
-              <p className="text-gray-600 mb-4">
-                AI analyzes symptoms, emotions, and recovery progress to provide personalized insights and recommendations.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-500">
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
-                  <span>Symptom tracking</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
-                  <span>Emotional wellness monitoring</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
-                  <span>Progress assessment</span>
-                </li>
-              </ul>
-            </div>
+            
 
             <div className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500">
               <div className="bg-gradient-to-r from-teal-500 to-green-500 p-4 rounded-full w-16 h-16 mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -258,8 +244,8 @@ function App() {
               <div className="flex space-x-2 mb-4">
                 <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">English</span>
                 <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Spanish</span>
-                <span className="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded-full">Mandarin</span>
-                <span className="px-2 py-1 bg-orange-100 text-orange-800 text-xs rounded-full">+20 more</span>
+                <span className="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded-full">Chineese</span>
+                <span className="px-2 py-1 bg-orange-100 text-orange-800 text-xs rounded-full">Hindi</span>
               </div>
             </div>
 
@@ -319,10 +305,10 @@ function App() {
             </div>
             <div className="bg-white/10 backdrop-blur-lg p-6 rounded-2xl">
               <div className="text-4xl md:text-5xl font-bold text-white mb-2">24/7</div>
-              <div className="text-blue-100">AI Monitoring</div>
+              <div className="text-blue-100">AI Outreach</div>
             </div>
             <div className="bg-white/10 backdrop-blur-lg p-6 rounded-2xl">
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">23+</div>
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2">3+</div>
               <div className="text-blue-100">Languages Supported</div>
             </div>
           </div>
@@ -352,7 +338,7 @@ function App() {
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Doctor Setup</h3>
               <p className="text-gray-600 leading-relaxed">
                 Your healthcare provider inputs your medical information, surgery details, 
-                and specific monitoring requirements into our secure system.
+                and any care preferences.
               </p>
             </div>
 
@@ -365,8 +351,8 @@ function App() {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Regular Check-ins</h3>
               <p className="text-gray-600 leading-relaxed">
-                Our AI reaches out at optimal intervals to assess your symptoms, 
-                mood, and recovery progress through natural conversations in your preferred language.
+                Our AI reaches out at optimal intervals to check in through
+                natural conversations in your preferred language.
               </p>
             </div>
 
@@ -379,8 +365,8 @@ function App() {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Smart Guidance</h3>
               <p className="text-gray-600 leading-relaxed">
-                Receive personalized recommendations, reminders for care instructions, 
-                and direct connections to appropriate healthcare providers when needed.
+                Receive reminders for care instructions and direct connections 
+                to appropriate healthcare providers when needed.
               </p>
             </div>
           </div>
@@ -392,7 +378,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Why Choose CareAI
+              Why Choose MedRec Voice
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Advanced AI technology meets compassionate care to support your complete recovery journey.
@@ -446,7 +432,7 @@ function App() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Evidence-Based</h3>
               <p className="text-gray-600">
-                Built on clinical research and best practices, ensuring recommendations align with medical standards.
+                Built on clinical research and best practices.
               </p>
             </div>
 
@@ -476,6 +462,7 @@ function App() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            {/*
             <button className="group bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center space-x-2">
               <span>Schedule a Demo</span>
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -484,6 +471,7 @@ function App() {
               <span>Contact Sales</span>
               <MessageSquare className="h-5 w-5" />
             </button>
+            */}
           </div>
           
           <div className="mt-12 grid md:grid-cols-3 gap-8 text-center">
@@ -514,12 +502,12 @@ function App() {
               <div className="bg-gradient-to-r from-blue-600 to-teal-600 p-2 rounded-lg">
                 <Heart className="h-6 w-6 text-white" />
               </div>
-              <span className="text-xl font-bold text-white">CareAI</span>
+              <span className="text-xl font-bold text-white">MedRec Voice</span>
             </div>
             
             <div className="text-gray-400 text-center md:text-right">
-              <p className="mb-2">© 2025 CareAI. All rights reserved.</p>
-              <p className="text-sm">Transforming post-surgery care with intelligent AI monitoring.</p>
+              <p className="mb-2">© 2025 MedRec Voice. All rights reserved.</p>
+              <p className="text-sm">Supporting post-surgery care with helpful AI outreach.</p>
             </div>
           </div>
         </div>
