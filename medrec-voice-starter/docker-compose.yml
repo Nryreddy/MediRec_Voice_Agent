@@ -2,11 +2,18 @@ version: "3.9"
 
 services:
   api:
-    build: ./backend
+    build:
+      context: ./backend      # <— build from backend directory
+      dockerfile: Dockerfile
+    working_dir: /app
     env_file:
-      - ./backend/.env
+      - backend/.env
+    environment:
+      - PYTHONPATH=/app
     ports:
       - "8000:8000"
+    volumes:
+      - ./backend:/app        # <— live-mount backend for dev
 
   web:
     build: ./frontend
